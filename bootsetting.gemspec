@@ -7,8 +7,8 @@ require "bootsetting/version"
 Gem::Specification.new do |spec|
   spec.name          = "bootsetting"
   spec.version       = Bootsetting::VERSION
-  spec.authors       = ["steve"]
-  spec.email         = ["chengquan.wang@ele.me"]
+  spec.authors       = ["CNKCQ"]
+  spec.email         = ["chengquan.personal@gmail.com"]
 
   spec.summary       = %q{happy setting}
   spec.description   = %q{effective command for boot setting}
@@ -30,6 +30,9 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_dependency "activesupport"
+
 
  	spec.add_runtime_dependency "colorize"
 
