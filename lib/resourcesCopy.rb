@@ -4,9 +4,6 @@ require 'FileUtils'
 class CopyHelper  
 	# desc "Copying files from acgn_ios_plugin to acgn_ios_plugin_pod folder"
 
-	# specify files which should not be copied
-	dont_copy = ['.xcassets','.bundle']
-
 	# desc "Instance"
 	def initialize()  
 	end  
@@ -19,6 +16,8 @@ class CopyHelper
 
 	# desc "public copy"
 	def copy(from_dir, to_dir)
+		# specify files which should not be copied
+		dont_copy = ['.xcassets','.bundle']
 		Dir[from_dir + "/**/*.{xib,storyboard,xcassets,bundle,jsbundle}"].each do |old_dest| 
 			new_dest = old_dest.gsub(from_dir, to_dir)
 			should_not_copy = dont_copy.any? { |s| new_dest.end_with?(s) }
