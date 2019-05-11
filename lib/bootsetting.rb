@@ -1,4 +1,5 @@
 require "bootsetting/version"
+require "resourcesCopy"
 require 'rainbow/refinement'
 require "thor"
 using Rainbow
@@ -18,6 +19,14 @@ class CLI < Thor
 		`hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x7000000E0},{"HIDKeyboardModifierMappingSrc":0x7000000E0,"HIDKeyboardModifierMappingDst":0x700000039}]}'`
 		puts "say hello to new keyMapping".bright.green
   end
+
+  desc "Copy resourses from", "another specific dir"
+  def copy(from_dir, to_dir)
+      puts "form: #{from_dir} to: #{to_dir}".bright.red
+      helper = CopyHelper.new()  
+      helper.copy(from_dir, to_dir)
+  end
+
 end
 
 CLI.start(ARGV)
