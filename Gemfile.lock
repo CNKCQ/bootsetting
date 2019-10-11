@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bootsetting (0.1.4)
+    bootsetting (0.1.6)
       colored2
       rainbow
       thor
@@ -21,7 +21,7 @@ DEPENDENCIES
   bootsetting!
   bundler (~> 2.0.1)
   rainbow
-  rake (~> 10.0)
+  rake (~> 10.5.0)
   thor
 
 BUNDLED WITH
