@@ -11,10 +11,10 @@ class FileCheckHelper
 	# duplicate file check
 	def check(type, suffix)
 		# specify files which should not be copied
-        super_dir = File.expand_path('../', __FILE__)
-        puts "🐈 #{super_dir}"
+        current_dir = Dir.pwd
+        puts "🐈 #{current_dir}"
         fileNames = []
-        files = Dir[super_dir + "/**/*.{#{suffix}}"]
+        files = Dir[current_dir + "/**/*.{#{suffix}}"]
         files.each do |old_dest| 
             fileNames.push(File.basename(old_dest))
         end
