@@ -49,6 +49,6 @@ class FileCheckHelper
                 }
             end
         }
+        puts "Successfully checking ...🍻🍻🍻🍻🍻...".green
     end
-    puts "Successfully checking ...🍻🍻🍻🍻🍻...".green
 end
