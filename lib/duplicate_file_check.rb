@@ -20,13 +20,10 @@ class FileCheckHelper
         end
         fileMaps = Hash.new([])
         files.each { |filePath| 
-            puts "🌹check type: #{type} suffix: #{suffix}"
             key = ""
             if type == "md5" 
-                puts "check type: #{type} suffix: #{suffix}"
                 key = md5 = Digest::MD5.hexdigest(File.read(filePath))
             elsif type == "name"
-                puts "check type: #{type} suffix: #{suffix}"
                 key = File.basename(filePath)
             end
             fileArr = [] + fileMaps[key] 
