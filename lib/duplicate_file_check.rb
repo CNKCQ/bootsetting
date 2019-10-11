@@ -1,5 +1,17 @@
 require 'FileUtils'
 require 'digest/md5'
+require 'rainbow/refinement'
+
+using Rainbow
+
+# puts "hello cyan".cyan
+# puts "hello red".red
+# puts "hello green".green
+# puts "hello yellow".yellow
+# puts "hello blue".blue
+# puts "hello magenta".magenta
+# puts "hello brown".brown
+# puts "hello blanchedalmond".blanchedalmond
 
 class FileCheckHelper  
 	# desc "Copying files from acgn_ios_plugin to acgn_ios_plugin_pod folder"
@@ -12,7 +24,6 @@ class FileCheckHelper
 	def check(type, suffix)
 		# specify files which should not be copied
         current_dir = Dir.pwd
-        puts "🐈 #{current_dir}"
         fileNames = []
         files = Dir[current_dir + "/**/*.{#{suffix}}"]
         files.each do |old_dest| 
@@ -31,12 +42,13 @@ class FileCheckHelper
         } 
         fileMaps.each {|key, value|
             if value.count > 1
-                puts "#{key} repeat count: #{value.count}"
+                puts "#{key} repeat count: #{value.count}".yellow
                 fileArr = [] + value
                 fileArr.each { |filePath|
                     puts "#{filePath}"
                 }
             end
         }
-	end
+    end
+    puts "Successfully checking ...🍻🍻🍻🍻🍻...".green
 end

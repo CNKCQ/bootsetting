@@ -17,9 +17,7 @@ class CLI < Thor
   # duplicate file check
   desc "dfc", "duplicate file check by type && suffix"
   def dfc(type, suffix)
-      super_dir = File.expand_path('../', __FILE__)
-      puts(super_dir)
-      puts "start to check ...".bright.red
+      puts "start to check ......".green
       puts "parames type: #{type} suffix: #{suffix}".blue
       helper = FileCheckHelper.new()
       helper.check(type, suffix)
