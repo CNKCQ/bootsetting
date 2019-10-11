@@ -21,8 +21,10 @@ class FileCheckHelper
         files.each { |filePath| 
             key = ""
             if type == "md5" 
+                puts "check type: #{type} suffix: #{suffix}".blue
                 key = md5 = Digest::MD5.hexdigest(File.read(filePath))
             elsif type == "name"
+                puts "check type: #{type} suffix: #{suffix}".green
                 key = File.basename(filePath)
             end
             fileArr = [] + fileMaps[key] 

@@ -18,6 +18,7 @@ class CLI < Thor
   desc "dfc", "duplicate file check by type && suffix"
   def dfc(type, suffix)
       puts "start to check ...".bright.red
+      puts "parames type: #{type} suffix: #{suffix}".blue
       helper = FileCheckHelper.new()
       helper.check(type, suffix)
   end

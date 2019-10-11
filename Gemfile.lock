@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bootsetting (0.1.6)
+    bootsetting (0.1.7)
       colored2
       rainbow
       thor
