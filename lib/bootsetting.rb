@@ -15,7 +15,7 @@ class CLI < Thor
     puts "Hello method #{name}".bright.red
   end
   # duplicate file check
-  desc "type", "suffix of each file"
+  desc "dfc", "duplicate file check by type && suffix"
   def dfc(type, suffix)
       puts "start to check ...".bright.red
       helper = FileCheckHelper.new()
