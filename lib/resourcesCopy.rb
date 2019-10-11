@@ -30,5 +30,5 @@ class CopyHelper
 			end
 		end
 	end
-  end
+end
 

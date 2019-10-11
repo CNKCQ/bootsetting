@@ -1,5 +1,6 @@
 require "bootsetting/version"
 require "resourcesCopy"
+require "duplicate_file_check"
 require 'rainbow/refinement'
 require "thor"
 using Rainbow
@@ -12,6 +13,13 @@ class CLI < Thor
   def hello(name, from=nil)
     puts "from: #{from}" if from
     puts "Hello method #{name}".bright.red
+  end
+  # duplicate file check
+  desc "type", "suffix of each file"
+  def dfc(type, suffix)
+      puts "start to check ...".bright.red
+      helper = FileCheckHelper.new()
+      helper.check(type, suffix)
   end
 
   desc "UserKeyMapping", "say hello to new keyMapping"
