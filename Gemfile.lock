@@ -11,7 +11,7 @@ GEM
   specs:
     colored2 (3.1.2)
     rainbow (3.0.0)
-    rake (10.5.0)
+    rake (13.0.1)
     thor (0.20.3)
 
 PLATFORMS
@@ -21,7 +21,7 @@ DEPENDENCIES
   bootsetting!
   bundler (~> 2.0.1)
   rainbow
-  rake (~> 10.5.0)
+  rake (~> 13.0.1)
   thor
 
 BUNDLED WITH

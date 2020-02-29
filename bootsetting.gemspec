@@ -39,7 +39,7 @@ Gem::Specification.new do |spec|
  	spec.add_runtime_dependency 'thor'
 
   spec.add_development_dependency "bundler", "~> 2.0.1"
-  spec.add_development_dependency "rake", "~> 10.5.0"
+  spec.add_development_dependency "rake", "~> 13.0.1"
   spec.add_development_dependency "rainbow"
   spec.add_development_dependency "thor"
 
